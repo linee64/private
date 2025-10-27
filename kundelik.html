@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор оценок Kundelik</title>
+    <link rel="stylesheet" href="kundelik.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Калькулятор оценок Kundelik</h1>
+        <div class="form-container">
+            <div class="section-group">
+                <label for="soch" class="section-label">СОЧ (50%)</label>
+                <table class="score-table">
+                    <tr>
+                        <td>Максимум</td>
+                        <td>Полученный балл</td>
+                    </tr>
+                    <tr>
+                        <td><input type="number" id="soch-max" min="0"></td>
+                        <td><input type="number" id="soch-points" min="0"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="section-group">
+                <label for="sor" class="section-label">СОР (25%) - 3 работы</label>
+                <table class="score-table">
+                    <tr>
+                        <td>Работа</td>
+                        <td>Максимум</td>
+                        <td>Полученный балл</td>
+                    </tr>
+                    <tr>
+                        <td>СОР 1</td>
+                        <td><input type="number" id="sor1-max" min="0"></td>
+                        <td><input type="number" id="sor1-points" min="0"></td>
+                    </tr>
+                    <tr>
+                        <td>СОР 2</td>
+                        <td><input type="number" id="sor2-max" min="0"></td>
+                        <td><input type="number" id="sor2-points" min="0"></td>
+                    </tr>
+                    <tr>
+                        <td>СОР 3</td>
+                        <td><input type="number" id="sor3-max" min="0"></td>
+                        <td><input type="number" id="sor3-points" min="0"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="section-group">
+                <label for="fo" class="section-label">ФО (25%) - Формативное оценивание</label>
+                <div id="fo-container">
+                    <div class="fo-item"><span>ФО 1</span><input type="number" class="fo-input" min="0" placeholder="шт"></div>
+                    <div class="fo-item"><span>ФО 2</span><input type="number" class="fo-input" min="0" placeholder="шт"></div>
+                    <div class="fo-item"><span>ФО 3</span><input type="number" class="fo-input" min="0" placeholder="шт"></div>
+                    <div class="fo-item"><span>ФО 4</span><input type="number" class="fo-input" min="0" placeholder="шт"></div>
+                    <div class="fo-item"><span>ФО 5</span><input type="number" class="fo-input" min="0" placeholder="шт"></div>
+                    <div class="fo-item"><span>ФО 6</span><input type="number" class="fo-input" min="0" placeholder="шт"></div>
+                    <div class="fo-item"><span>ФО 7</span><input type="number" class="fo-input" min="0" placeholder="шт"></div>
+                    <div class="fo-item"><span>ФО 8</span><input type="number" class="fo-input" min="0" placeholder="шт"></div>
+                    <div class="fo-item"><span>ФО 9</span><input type="number" class="fo-input" min="0" placeholder="шт"></div>
+                    <div class="fo-item"><span>ФО 10</span><input type="number" class="fo-input" min="0" placeholder="шт"></div>
+                </div>
+            </div>
+            <button onclick="calculateResult()" class="calculate-btn">Вычислить</button>
+            <div class="result-container">
+                <h2>Итоговый результат: <span id="result">0%</span> <span id="grade">2</span></h2>
+            </div>
+        </div>
+    </div>
+    <script src="kundelik.js"></script>
+</body>
+</html>
